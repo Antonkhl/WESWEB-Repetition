@@ -1,21 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niklas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Swedish Drug Market</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/functions.scss">
+    <link rel="stylesheet" href="scss/variables.css">
 </head>
-
 <body>
-    <h1>Hej Niklas!</h1>
 
-    <form action="/" method="post">
-        <input type="email" name="email">
-        <input type="text" name="message">
-        <button type="submit">Send</button>
-    </form>
+
+<div id="container">
+<div id="header">
+<h1 id="headertext">The Drug market of Sweden</h1>
+
+<img id="weed" src="./Bilder/weed.png" alt="">
+
+<img id="search" src="./Bilder/search.png" alt="">
+<h2 id="searchText">Search</h2>
+
+<img id="loggain" src="./Bilder/loggain.png" alt="">
+<a href="/login" id="loggainText">Logga in</a>
+<a href="/forum" id="FormText">Form</a>
+
+
+</div>
+
+<div id="Main">
+
+<div id="sale1General">
+<img id="sale1" src="./Bilder/sale1.jpg" alt="">
+
+<div id="text1">
+<p id="sale1Price">Price: 50 kr/kg</p>
+<p id="sale1Place">Place: Eksjö</p>
+<p id="sale1Desc">Description: Cannabis (även känt som marijuana i växtform och hasch) är ihoppressade trikomer</p>
+</div>
+</div>
+
+<div id="sale2General">
+<img id="sale2" src="./Bilder/sale2.jpg" alt="">
+<div id="text2">
+<p id="sale2Price">Price: 100 kr/kg</p>
+<p id="sale2Place">Place: Göteborg</p>
+<p id="sale2Desc">Description: Kokain (bensoylmetylekgonin) är en alkaloid med narkotisk verkan.</p>
+</div>
+</div>
+
+<div id="sale3General">
+<img id="sale3" src="./Bilder/sale3.webp" alt="">
+<div id="text3">
+<p id="sale3Price">Price: 150 kr/kg</p>
+<p id="sale3Place">Place: Stockholm</p>
+<p id="sale3Desc">Description: Spice är ett samlingsnamn för syntetiska cannabinoider som ger ett väldigt starkt rus.</p>
+</div>
+</div>
+
+<div id="sale4General">
+<img id="sale4" src="./Bilder/sale4.jpg" alt="">
+<div id="text4">
+<p id="sale4Price">Price: 200 kr/kg</p>
+<p id="sale4Place">Place: Alingsås</p>
+<p id="sale4Desc">Description: LSD, LSD-25 eller lysergsyradietylamid, C20H25N3O, är ett semisyntetiskt psykoaktivt, hallucinogent preparat,</p>
+</div>
+</div>
+
+<div id="sale5General">
+<img id="sale5" src="./Bilder/sale5.jpg" alt="">
+<div id="text5">
+<p id="sale5Price">Price: 250 kr/kg</p>
+<p id="sale5Place">Place: Skara</p>
+<p id="sale5Desc">Description: MDMA (systematiskt namn 3,4-metylendioximetamfetamin alternativt (1-(3,4-metylendioxifenyl)-2-metyletylamin)), på gatan oftast kallad ecstasy eller XTC</p>
+</div>
+</div>
+
+<div id="sale6General">
+<img id="sale6" src="./Bilder/sale6.jpg" alt="">
+<div id="text6">
+<p id="sale6Price">Price: 300 kr/kg</p>
+<p id="sale6Place">Place: Malmö</p>
+<p id="sale6Desc">Description: Ketamin är ett bedövningsmedel inom kirurgin </p>
+</div>
+</div>
+
+
+
+<div id="Bottominfo">
+    <img id="weed2" src="./Bilder/weed.png" alt="">
+    <p id="socialamedier">Sociala medier:</p>
+
+    <img id="facebook" src="./Bilder/facebook.png" alt="">
+    <p id="facebooktext">The Drug Market Of Sweden</p>
+
+    <img id="twitter" src="./Bilder/twitter.png" alt="">
+    <p id="twittertext">@TheDrugMarketOfSweden</p>
+
+    <img id="instagram" src="./Bilder/instragram.webp" alt="">
+    <p id="instagramtext">The_Drug_Market_Of_Sweden</p>
+
+    <p id="information">Information: </p>
+    <p id="informationText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi vel possimus praesentium illum aperiam porro expedita optio veritatis minus? Id sed, dolorem fugit tempora eius inventore beatae voluptas molestias? Maiores? </p>
+
+    <p id="adress">Adress:</p>
+    <p id="adresstext">lol nice try</p>
+
+</div>
+
+<div id="Menu">
+    <div id="Sidebar" class="sidemenu">
+    <a href="javascript:void(0)" CLASS="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Weed</a>
+    <a href="#">Cocaine</a>
+    <a href="#">Spice</a>
+    <a href="#">LSD</a>
+    <a href="#">MDMA</a>
+    <a href="#">Ketamine</a>
+    
+</div>
+    <span id="button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+    
+    <script>
+    function openNav() {
+        document.getElementById("Sidebar").style.width = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("Sidebar").style.width = "0";
+    }
+    
+    </script>
+
+    
+    
+    </div>
+</div>
+
+    
 </body>
-
 </html>

@@ -1,0 +1,229 @@
+@import './variables.scss';
+
+// GENERELLT 
+
+//Gör en funktion för vad fonten ska vara för hela sidan.
+@mixin font($font) {
+  font-family: $font; 
+}
+
+//Gör en funktion för att definera att postion är relative, så att jag inte behöver skriva positon: relative överallt
+@mixin relative($position) {
+  position: $position;
+}
+
+// HEADERN
+
+//Gör en funktion för header bildern, där jag ändrar storlek och definerar postionenn
+@mixin headerImages($position, $height, $width) {
+  position: $position;
+  height: $height;
+  width: $width;
+}
+
+// MAIN
+
+
+//Funktionen lägger till höjden och bredden till alla textboxar som bilderna har och gör en border-radius, som finslippar kantarna.
+@mixin textBoxesImage($heightMain, $widthMain, $borderRadius, $position) {
+  position: $position;
+  height: $heightMain;
+  width: $widthMain;
+  border-radius: $borderRadius;
+}
+
+//Funktionen lägger till massor av funktioner till bilderna, definerar att den ska vara synlig, ska vara en block, ska vara en 0.5s överväg
+//Jag gömmer backfacet av funktionen, så att man bara ser själva rutan. Och definerar postionen som relative  
+@mixin textBoxesImageText($opacity, $display, $transition, $backfacevisibility, $position) {
+  opacity: $opacity;
+  display: $display;
+  transition: $transition;
+  backface-visibility: $backfacevisibility;
+  position: $position;
+}
+
+// Funktionen är för när man ej hovrar över en av bilderna, ska ha en överväg när man ej hovrar över. Opacitien är 0 så man ser ej något
+// Position: relative så jag kan flytta bliden
+// Transform finns för att det ska vara en snygg överväg, ingen text align. Så det ej ändras när jag flyttar osv
+@mixin MiddleText($transition, $opacityText, $position, $size, $transform, $text-align) {
+  transition: $transition;
+  opacity: $opacityText;
+  position: $position;
+  top: $size;
+  left: $size;
+  transform: $transform;
+  -ms-transform: $transform;
+  text-align: $text-align;
+}
+
+//när man hovrar över bilden, gör så att man ser text rutan
+@mixin imageHover($opacityHover, $position) {
+opacity: $opacityHover;
+position: $position;
+}
+
+//den generala opaciten, använder denna funktionen till när saker ej är riktgit synliga
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+//Själva texten som kommer upp när man hovrar över en av bilderna, 
+//Går backgrundsfärgen i textrutan grön
+//Ändrar färg på texten till vit
+//ändrar på storleken på texten
+//Lägger till lite padding för att ha lite mellanrum mellan textrutan och bilden
+//definerar hur lång och bred bilden ska vara
+//Lägger till en border så det ser ut snyggare
+//Lägger till position: relative, så jag kan flytta på den.
+@mixin boxTexts($box_bgcolor, $box_textcolor, $box_fontSize, $box_padding, $box_TextHeight, $box_TextWidth, $box_border, $position) {
+ background-color: $box_bgcolor;
+ color: $box_textcolor;
+ font-size: $box_fontSize;
+ padding: $box_padding;
+ height: $box_TextHeight;
+ width: $box_TextWidth;
+ border: $box_border;
+ position: $position;
+}
+
+// BOTTOM INFORMATION
+
+//Definerar storleken på logga bildern i bottom information
+@mixin imgSizeWeed($img_weed_width, $img_weed_height) {
+  height: $img_weed_width;
+  width: $img_weed_height;
+}
+
+//Definerar hur header texterna ska se ut i bottom infromation, bolda och ett visst storlek
+@mixin Headers($bold, $font_size_medias) {
+  font-weight: $bold;
+  font-size: $font_size_medias;
+}
+
+//Funktionen definera hur alla dessa sociala mediers loggor ska se ut
+@mixin SocialMediaIcons($social_media_sizes) {
+ height: $social_media_sizes;
+ width: $social_media_sizes;
+}
+
+
+//Funktionen definerar hur stor texten i bottom information ska vara
+@mixin TextSizing($font_size_medias) {
+  font-size: $font_size_medias;
+}
+
+// MENY
+
+
+//Funktionen är för själva navigationen när den är då öppen, jag stylar den.
+//Ger den en visst storlek.
+//gör den fixed, så att den är kvar till man faktiskt stänger den.
+//Ger den en z-index så att man ser den och att inte några andra object är framför menyet
+//Postionerar den vid den vänsta sidan med top och left
+//Ger den en svart backgrundsfärg
+//Gömmer overflown, så att den inte går mer åt höger än texten
+// går en överväg när man klickar på knappen, så det ser snyggt ut.
+// Ger den lite padding så att det finns lite mellan rum mellan toppen av menyen och själva texten.
+@mixin sideNavigation($menu_height, $menu_width, $menu_top, $menu_left, $fixed, $menu_zindex, $menu_bgc, $menu_hidden, $menu_top_padding) {
+  height: $menu_height;
+  width: $menu_width;
+  position: $fixed;
+  z-index: $menu_zindex;
+  top: $menu_top;
+  left: $menu_left;
+  background-color: $menu_bgc;
+  overflow-x: $menu_hidden;
+  transition: $menu_transition;
+  padding-top: $menu_top_padding;
+}
+
+
+//Funktionen är för object i menyet
+//Lägger till padding mellan varja object i menyet
+//Definerar att det inte ska vara någon text decoration
+//Ändrar på storleken på texterna i menyet
+//Ger de alla färg
+//Gör de till ett block så att det blir till ett meny
+// Ger de ochså en transition, så att man kan kunna se de medans övervägen är på gång.
+@mixin sideNavigationItems($menu_padding, $menu_font_size, $menu_item_color, $block, $menu_text_decoration, $items_transition) {
+  padding: $menu_padding;
+  text-decoration: $menu_text_decoration;
+  font-size: $menu_font_size;
+  color: $menu_item_color;
+  display: $block;
+  transition: $items_transition;
+}
+
+//FUNKTIONEN FUNKAR EJ, HAR EJ FIXAT
+//Fast funktionen skulle ha ändrat på färgen på grejerna på menyet
+@mixin sideMenuHover($color_hover) {
+  $color: $color_hover;
+}
+
+//Knappen är knappen som stänger själva menyet, den ska vara relative, så jag kan ändra på var den ska vara beroende på var den är
+//positionerar den i själva menyet
+//ändrar på storleken på den,
+//ger den lite margin från vänster, så att den stannar där. 
+@mixin NavigationButton($button_postion, $button_right, $button_fontsize, $button_margin_left, $bottom_top) {
+position: $button_postion;
+top: $bottom_top;
+right: $button_right;
+font-size: $button_fontsize;
+margin-left: $button_margin_left;
+}
+
+
+//Log in
+@mixin LoginButton($login_bgc, $login_width, $login_color, $login_padding, $login_margin, $login_border, $login_box_sizing){
+  background-color: $login_bgc;
+  width: $login_width;
+  color: $login_color;
+  padding: $login_padding;
+  margin: $login_margin;
+  border: $login_border;
+  box-sizing: $login_box_sizing;
+}
+
+@mixin form($login_border_form) {
+  border: $login_border_form;
+}
+
+@mixin inputTextPassword($login_width, $login_margin_input, $login_padding_input, $login_display, $login_border_input) {
+  width: $login_width;
+  margin: $login_margin_input;
+  padding: $login_padding_input;
+  display: $login_display;
+  border: $login_border_input;
+  box-sizing: $login_box_sizing;
+}
+
+@mixin inputFormSelect($form_width, $form_padding, $form_margin, $form_display, $form_border, $form_border_radius) {
+  width: $form_width;
+ padding: $form_padding;
+ margin: $form_margin;
+ display: $form_display;
+ border: $form_border;
+ border-radius: $form_border_radius;
+ box-sizing: $form_border_sizing;
+}
+
+@mixin inputFormSubmit($form_width, $form_bgc, $form_color, $form_submit_padding, $form_margin, $form_submit_border, $form_border_radius, $form_cursor) {
+  width: $form_width;
+  background-color: $form_bgc;
+  color: $form_color;
+  padding: $form_submit_padding;
+  margin: $form_margin;
+  border: $form_submit_border;
+  border-radius: $form_border_radius;
+  cursor: $form_cursor;
+}
+
+
+
+
+
+
+
+
+
+
