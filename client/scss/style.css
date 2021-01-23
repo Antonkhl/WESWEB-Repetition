@@ -1,0 +1,358 @@
+body {
+  overflow-x: hidden;
+}
+
+#container {
+  height: 3100px;
+  overflow: hidden;
+}
+
+#header {
+  background-color: lightblue;
+}
+
+#weed {
+  position: relative;
+  height: 150px;
+  width: 180px;
+  left: 830px;
+  bottom: 149px;
+}
+
+#headertext {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+}
+
+#search {
+  position: relative;
+  position: relative;
+  height: 50px;
+  width: 60px;
+  left: 950px;
+  bottom: 250px;
+}
+
+#searchText {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 1130px;
+  bottom: 275px;
+}
+
+#loggain {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  height: 50px;
+  width: 60px;
+  left: 1300px;
+  bottom: 369px;
+}
+
+#loggainText {
+  position: relative;
+  left: 1230px;
+  bottom: 354px;
+  font-size: 25px;
+}
+
+#header {
+  border: 10px;
+  height: 155px;
+  border-style: solid;
+  border-color: black;
+}
+
+#text1, #text2, #text3, #text4, #text5, #text6 {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: none;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  padding: 16px, 32px;
+  height: 230px;
+  width: 200px;
+  border: 5px solid #555;
+  position: relative;
+}
+
+#sale1, #sale2, #sale3, #sale4, #sale5, #sale6 {
+  position: relative;
+  height: 340px;
+  width: 390px;
+  border-radius: 8px;
+  opacity: 1;
+  display: block;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+}
+
+#sale1General:hover #sale1, #sale2General:hover #sale2, #sale3General:hover #sale3, #sale4General:hover #sale4, #sale5General:hover #sale5, #sale6General:hover #sale6 {
+  opacity: 0.3;
+  position: relative;
+}
+
+#sale1General:hover #text1, #sale2General:hover #text2, #sale3General:hover #text3, #sale4General:hover #text4, #sale5General:hover #text5, #sale6General:hover #text6 {
+  opacity: 1;
+}
+
+#sale1 {
+  top: 100px;
+  left: 180px;
+}
+
+#text1 {
+  left: 380px;
+  bottom: 70px;
+}
+
+#sale2 {
+  bottom: 480px;
+  left: 1050px;
+}
+
+#text2 {
+  bottom: 648px;
+  left: 1245px;
+}
+
+#sale3 {
+  bottom: 600px;
+  left: 180px;
+}
+
+#text3 {
+  position: relative;
+  bottom: 770px;
+  left: 380px;
+}
+
+#sale4 {
+  bottom: 1180px;
+  left: 1050px;
+}
+
+#text4 {
+  bottom: 1345px;
+  left: 1250px;
+}
+
+#sale5 {
+  bottom: 1280px;
+  left: 180px;
+}
+
+#text5 {
+  bottom: 1445px;
+  left: 370px;
+}
+
+#sale6 {
+  bottom: 1860px;
+  left: 1050px;
+}
+
+#text6 {
+  bottom: 2030px;
+  left: 1250px;
+}
+
+.sidemenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidemenu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#button {
+  position: relative;
+  bottom: 4780px;
+}
+
+.sidemenu .closebtn {
+  position: relative;
+  top: 0;
+  right: 0px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#Bottominfo {
+  position: relative;
+  bottom: 1900px;
+}
+
+#Bottominfo {
+  background-color: lightblue;
+  border: 10px;
+  border-style: solid;
+  border-color: black;
+}
+
+#weed2 {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: 630px;
+}
+
+#socialamedier {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  left: 590px;
+  bottom: 50px;
+}
+
+#facebook, #twitter, #instagram {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  left: 300px;
+  bottom: 70px;
+}
+
+#facebooktext, #twittertext, #instagramtext {
+  font-size: 40px;
+  position: relative;
+  left: 360px;
+  bottom: 163px;
+}
+
+#information {
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  left: 585px;
+  bottom: 120px;
+}
+
+#informationText {
+  font-size: 40px;
+  position: relative;
+  bottom: 135px;
+}
+
+#adresstext {
+  font-size: 40px;
+  position: relative;
+  left: 560px;
+  bottom: 160px;
+}
+
+#adress {
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  bottom: 130px;
+  left: 580px;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#FormText {
+  position: relative;
+  font-size: 30px;
+  z-index: 1;
+  bottom: 355px;
+  left: 1300px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#livechat-overall {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#message-container {
+  width: 80%;
+  max-width: 1200px;
+}
+
+#message-container div {
+  background-color: #CCC;
+  padding: 5px;
+}
+
+#message-container div:nth-child(2n) {
+  background-color: #fff;
+}
+
+#send-container {
+  position: fixed;
+  padding-bottom: 30px;
+  bottom: 0;
+  background-color: #fff;
+  max-width: 1200px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#message-input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/*# sourceMappingURL=style.css.map */

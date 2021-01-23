@@ -188,14 +188,6 @@ margin-left: $button_margin_left;
   border: $login_border_form;
 }
 
-@mixin inputTextPassword($login_width, $login_margin_input, $login_padding_input, $login_display, $login_border_input) {
-  width: $login_width;
-  margin: $login_margin_input;
-  padding: $login_padding_input;
-  display: $login_display;
-  border: $login_border_input;
-  box-sizing: $login_box_sizing;
-}
 
 @mixin inputFormSelect($form_width, $form_padding, $form_margin, $form_display, $form_border, $form_border_radius) {
   width: $form_width;
@@ -217,6 +209,41 @@ margin-left: $button_margin_left;
   border-radius: $form_border_radius;
   cursor: $form_cursor;
 }
+
+ @mixin livechat-overallStuff($liveChat_padding, $liveChat_margin, $liveChat_display, $justify-content) {
+   padding: $liveChat_padding;
+   margin: $liveChat_margin;
+   display: $liveChat_display;
+   justify-content: $justify-content;
+ }
+
+  @mixin message-container($liveChat_width, $liveChat_max_width) {
+    width: $liveChat_width;
+    max-width: $liveChat_max_width;
+  }
+
+  @mixin message-container-div($livechat_bgc_container, $livechat_container_padding) {
+  background-color: $livechat_bgc_container;
+  padding: $livechat_container_padding;
+  }
+
+  @mixin message-container-nth-child($livechat_container_nth_bgc) {
+    background-color: $livechat_container_nth_bgc;
+  }
+
+  @mixin send-container($liveChat_position, $liveChat_padding_bottom, $liveChat_bottom, $livechat_container_nth_bgc, $liveChat_max_width, $liveChat_width, $liveChat_display) {
+    position: $liveChat_position;
+    padding-bottom: $liveChat_padding_bottom;
+    bottom: $liveChat_bottom;
+    background-color: $livechat_container_nth_bgc;
+    max-width: $liveChat_max_width;
+    width: $liveChat_width;
+    display: $liveChat_display;
+  }
+
+  @mixin message-input($livechat_grow) {
+    flex-grow: $livechat_grow;
+  }
 
 
 

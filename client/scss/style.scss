@@ -290,17 +290,6 @@ bottom: 50px;
     left: 580px;
   }
 
-  button {
-    @include LoginButton($login_bgc, $login_width, $login_color, $login_padding, $login_margin, $login_border, $login_box_sizing);
-  }
-
-  form  {
-    @include form($login_border_form);
-  }
-
-  input[type=text], input[type=password] {
-    @include inputTextPassword($login_width, $login_margin_input, $login_padding_input, $login_display, $login_border_input);
-  }
 
   button:hover {
     opacity: 0.7;
@@ -321,6 +310,35 @@ left: 1300px;
   input[type=submit] {
    @include inputFormSubmit($form_width, $form_bgc, $form_color, $form_submit_padding, $form_margin, $form_submit_border, $form_border_radius, $form_cursor);
   }
+
+  //livechat
+  #livechat-overall {
+    @include livechat-overallStuff($liveChat_padding, $liveChat_margin, $liveChat_display, $liveChat_justify-content);
+  }
+
+  #message-container {
+    @include message-container($liveChat_width, $liveChat_max_width);
+  }
+
+  #message-container div {
+    @include message-container-div($livechat_bgc_container, $livechat_container_padding);
+  }
+
+  #message-container div:nth-child(2n) {
+    @include message-container-nth-child($livechat_container_nth_bgc);
+  }
+
+  #send-container {
+    @include send-container($liveChat_position, $liveChat_padding_bottom, $liveChat_bottom, $livechat_container_nth_bgc, $liveChat_max_width, $liveChat_width, $liveChat_display);
+  }
+
+  #message-input {
+    @include message-input($livechat_grow);
+  }
+
+
+
+
 
 
 

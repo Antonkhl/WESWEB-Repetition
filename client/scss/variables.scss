@@ -69,21 +69,6 @@ $font_size_medias: 40px;
 $social_media_sizes: 50px;
 
 
-//Login page
-$login_bgc: #4CAF50;
-$login_width: 100%;
-$login_color: orange;
-$login_padding: 15px;
-$login_margin: 10px 0px;
-$login_border: none;
-$login_box_sizing: border-box;
-$login_border_form: 3px soild #f1f1f1;
-$login_margin_input: 8px 0;
-$login_padding_input: 12px 20px;
-$login_display: inline-block;
-$login_border_input: 2px solid green;
-
-
 //form page
 $form_width: 100%;
 $form_bgc: #4CAF50;
@@ -97,6 +82,21 @@ $form_color: white;
 $form_submit_padding: 14px 20px;
 $form_submit_border: none;
 $form_cursor: pointer;
+
+//Livechat page
+$liveChat_padding: 0;
+$liveChat_margin: 0;
+$liveChat_display: flex;
+$liveChat_justify-content: center;
+$liveChat_width: 80%;
+$liveChat_max_width: 1200px;
+$livechat_bgc_container: #CCC;
+$livechat_container_padding: 5px;
+$livechat_container_nth_bgc: #fff;
+$liveChat_position: fixed;
+$liveChat_padding_bottom: 30px;
+$liveChat_bottom: 0;
+$livechat_grow: 1;
 
 
 
