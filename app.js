@@ -1,27 +1,9 @@
-const mongoose = require("mongoose")
-const io = require('socket.io')(3000)
-const personModel = require("./PersonModel")
-const dBModule = require("./dBModule")
+const mongoose = require("mongoose");
+const personModel = require("./PersonModel");
+const dBModule = require("./dBModule");
 const express = require('express')
-const app = express()
-const port = 3000
-
-const users = {}
-
-io.on('connection', socket => {
-  socket.on('new-user', name => {
-  users[socket.id] = name
-  socket.broadcast.emit('user-connected', name)
-  })
-  socket.on('send-chat-message', message => {
-   socket.broadcast.emit('chat-message', { message: message, name:
-    user[socket.id] })
-  })
-  socket.on('disconnect', () => {
-    socket.broadcast.emit('user-disconnected', users[socket.id])
-    delete users[socket.id]
-   })
-})
+const app = express();
+const port = 3000;
 
 const staticDir = __dirname + '\\client\\'
 app.use(express.static(staticDir))
@@ -47,9 +29,6 @@ app.get('/form', (req, res) => {
   res.render(__dirname + '/views/form.ejs')
 })
 
-app.get('/livechat', (req, res) => {
-  res.render(__dirname + '/views/livechat.ejs')
-})
 
 app.post('/form', function (req, res) {
     const person = personModel.createPerson(req.body.firstname, req.body.lastname, req.body.country)
