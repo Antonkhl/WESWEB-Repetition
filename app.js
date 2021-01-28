@@ -27,6 +27,13 @@ app.get('/', (req, res) => {
 
 app.get('/form', (req, res) => {
   res.render(__dirname + '/views/form.ejs')
+  person.find({}, function(err, data) {
+    res.render('form.ejs', {
+      firstname: firstname,
+      lastname: lastname,
+      select: country
+    })
+  })
 })
 
 
